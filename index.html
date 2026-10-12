@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MYKONOS Fragrance</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --hitam: #0a0a0a;
+        --abu: #262626;
+        --emas: #8a6f2a;
+        --emas-muda: #e3c66a;
+        --krem: #f2efe6;
+      }
+      body {
+        background: var(--krem);
+        color: var(--hitam);
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background: var(--hitam);
+      }
+      .navbar-brand {
+        color: var(--emas-muda) !important;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+      .nav-link {
+        color: var(--krem) !important;
+      }
+      .nav-link:hover {
+        color: var(--emas-muda) !important;
+      }
+      .hero {
+        background: var(--abu);
+        color: var(--krem);
+        padding: 80px 0;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 5vw, 4rem);
+      }
+      .hero span {
+        color: var(--emas-muda);
+      }
+      .btn-gold {
+        background: var(--emas-muda);
+        border: 1px solid var(--emas-muda);
+        color: var(--hitam);
+      }
+      .btn-gold:hover {
+        background: var(--emas);
+        border-color: var(--emas);
+        color: white;
+      }
+      .section-title {
+        margin-bottom: 12px;
+      }
+      .product-card {
+        height: 100%;
+        border: 1px solid #d8d0bc;
+        border-radius: 4px;
+        background: #fffdf8;
+      }
+      .product-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        padding: 12px;
+        background: white;
+      }
+      .product-card .card-title {
+        color: var(--emas);
+      }
+      .price {
+        font-weight: bold;
+      }
+      .about {
+        background: var(--abu);
+        color: var(--krem);
+      }
+      .contact-box {
+        background: #fffdf8;
+        border: 1px solid #d8d0bc;
+        padding: 24px;
+      }
+      .form-control,
+      .form-select {
+        border-radius: 3px;
+      }
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--emas);
+        box-shadow: 0 0 0 0.2rem #8a6f2a25;
+      }
+      footer {
+        background: var(--hitam);
+        color: var(--krem);
+        padding: 22px 0;
+      }
+      .modal-header {
+        background: var(--hitam);
+        color: var(--krem);
+      }
+      .modal-header .btn-close {
+        filter: invert(1);
+      }
+      @media (max-width: 576px) {
+        .hero {
+          padding: 55px 0;
+        }
+        .product-card img {
+          height: 230px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#beranda">MYKONOS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Buka menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produk">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bagian pembuka -->
+    <header class="hero" id="beranda">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <p class="mb-2" style="color: var(--emas-muda)">
+              MYKONOS FRAGRANCE
+            </p>
+            <h1>Temukan aroma yang cocok dengan <span>ceritamu.</span></h1>
+            <p class="mt-3 mb-4">
+              Parfum untuk menemani aktivitas sehari-hari dan membuat setiap
+              momen terasa lebih berkesan.
+            </p>
+            <a href="#produk" class="btn btn-gold px-4">Lihat Produk</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Daftar produk: Bootstrap container, grid, dan card -->
+    <section class="py-5" id="produk">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Pilihan Parfum</h2>
+          <p class="text-secondary">
+            Pilih aroma favoritmu dari koleksi MYKONOS.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card product-card">
+              <img
+                src="images/foto1.jpeg"
+                class="card-img-top"
+                alt="Parfum Vanilla Clouds"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Dark Secret</h3>
+                <p class="card-text">
+                  Aroma manis dan lembut yang cocok untuk digunakan sehari-hari.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <span class="price">Rp388.516</span
+                  ><button
+                    class="btn btn-outline-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detail1"
+                  >
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card product-card">
+              <img
+                src="images/foto2.jpeg"
+                class="card-img-top"
+                alt="Parfum Dark Secret"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Aphrodite</h3>
+                <p class="card-text">
+                  Pilihan aroma dengan kesan berani untuk menemani acara
+                  spesial.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <span class="price">Rp181.200</span
+                  ><button
+                    class="btn btn-outline-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detail2"
+                  >
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card product-card">
+              <img
+                src="images/foto3.jpeg"
+                class="card-img-top"
+                alt="Parfum Aphrodite"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Red Collection</h3>
+                <p class="card-text">
+                  Tampilan elegan untuk melengkapi gaya dan penampilanmu.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <span class="price">Rp180.700</span
+                  ><button
+                    class="btn btn-outline-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detail3"
+                  >
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card product-card">
+              <img
+                src="images/foto4.jpeg"
+                class="card-img-top"
+                alt="Parfum koleksi merah"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Dreamspace</h3>
+                <p class="card-text">
+                  Kesan modern dan percaya diri untuk menemani kegiatanmu.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <span class="price">Rp401.212</span
+                  ><button
+                    class="btn btn-outline-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detail4"
+                  >
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card product-card">
+              <img
+                src="images/foto5.jpeg"
+                class="card-img-top"
+                alt="Parfum koleksi turquoise"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Reflection Elixir</h3>
+                <p class="card-text">
+                  Pilihan dengan tampilan segar untuk menemani hari yang aktif.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <span class="price">Rp269.000</span
+                  ><button
+                    class="btn btn-outline-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detail5"
+                  >
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card product-card">
+              <img
+                src="images/foto6.jpeg"
+                class="card-img-top"
+                alt="Parfum Reflection Elixir"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Vanilla Clouds</h3>
+                <p class="card-text">
+                  Parfum dengan tampilan modern untuk berbagai kesempatan.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <span class="price">Rp153.100</span
+                  ><button
+                    class="btn btn-outline-dark btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detail6"
+                  >
+                    Detail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about py-5" id="tentang">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-md-4"><h2>Tentang MYKONOS</h2></div>
+          <div class="col-md-8">
+            <p class="mb-0">
+              MYKONOS Fragrance menyediakan pilihan parfum untuk berbagai
+              suasana. Kami ingin membantu kamu menemukan aroma yang sesuai
+              dengan selera dan kegiatanmu. Pilih produk favorit dan hubungi
+              kami jika ingin bertanya lebih lanjut.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form kontak -->
+    <section class="py-5" id="kontak">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h2>Hubungi Kami</h2>
+            <p class="text-secondary">
+              Punya pertanyaan tentang produk? Isi form berikut ini.
+            </p>
+          </div>
+          <div class="col-lg-8">
+            <div class="contact-box">
+              <form id="formKontak">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nama" class="form-label">Nama *</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      id="nama"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email *</label
+                    ><input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="topik" class="form-label">Keperluan</label
+                    ><select id="topik" class="form-select">
+                      <option>Pertanyaan produk</option>
+                      <option>Rekomendasi parfum</option>
+                      <option>Pemesanan</option>
+                      <option>Lainnya</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="pesan" class="form-label">Pesan *</label
+                    ><textarea
+                      id="pesan"
+                      class="form-control"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-gold px-4">
+                      Kirim Pesan
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between gap-2"
+      >
+        <span>MYKONOS Fragrance</span
+        ><span>© 2026 · Fakhrul Hafizhuddin Anwar || 2508478</span>
+      </div>
+    </footer>
+
+    <!-- Modal detail produk -->
+    <div class="modal fade" id="detail1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dark Secret</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Parfum dengan kesan manis dan lembut. Harga contoh: Rp388.516.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="detail2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aphrodite</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Pilihan parfum dengan karakter yang berani. Harga contoh: Rp181.200.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="detail3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Red Collection</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Parfum dengan tampilan elegan. Harga contoh: Rp180.700.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="detail4" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dreamspace</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Koleksi dengan kesan modern. Harga contoh: Rp401.212.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="detail5" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reflection Elixir</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Koleksi dengan tampilan segar. Harga contoh: Rp269.000.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="detail6" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Vanilla Clouds</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Parfum dengan tampilan modern. Harga contoh: Rp153.100.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal konfirmasi form -->
+    <div
+      class="modal fade"
+      id="modalKonfirmasi"
+      tabindex="-1"
+      aria-labelledby="judulKonfirmasi"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="judulKonfirmasi">Konfirmasi Pesan</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Apakah data berikut sudah benar?</p>
+            <p class="mb-1">
+              <strong>Nama:</strong> <span id="cekNama"></span>
+            </p>
+            <p class="mb-1">
+              <strong>Email:</strong> <span id="cekEmail"></span>
+            </p>
+            <p class="mb-1">
+              <strong>Keperluan:</strong> <span id="cekTopik"></span>
+            </p>
+            <p><strong>Pesan:</strong></p>
+            <p id="cekPesan" style="white-space: pre-wrap"></p>
+            <small class="text-secondary"
+              >Ini hanya simulasi tugas dan belum mengirim data ke
+              server.</small
+            >
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Periksa Lagi</button
+            ><button type="button" class="btn btn-gold" id="konfirmasiKirim">
+              Ya, Lanjutkan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSelesai" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Pesan Dikonfirmasi</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Terima kasih! Simulasi konfirmasi pesan berhasil.
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-gold" data-bs-dismiss="modal">
+              Selesai
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Menampilkan ringkasan form sebelum dikonfirmasi.
+      const form = document.getElementById("formKontak");
+      const modalKonfirmasi = new bootstrap.Modal(
+        document.getElementById("modalKonfirmasi"),
+      );
+      const modalSelesai = new bootstrap.Modal(
+        document.getElementById("modalSelesai"),
+      );
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        document.getElementById("cekNama").textContent =
+          document.getElementById("nama").value;
+        document.getElementById("cekEmail").textContent =
+          document.getElementById("email").value;
+        document.getElementById("cekTopik").textContent =
+          document.getElementById("topik").value;
+        document.getElementById("cekPesan").textContent =
+          document.getElementById("pesan").value;
+        modalKonfirmasi.show();
+      });
+
+      document
+        .getElementById("konfirmasiKirim")
+        .addEventListener("click", function () {
+          modalKonfirmasi.hide();
+          form.reset();
+          setTimeout(function () {
+            modalSelesai.show();
+          }, 300);
+        });
+    </script>
+  </body>
+</html>
